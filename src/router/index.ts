@@ -10,6 +10,26 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/mustang',
+    name: 'mustang',
+    component: () => import('../views/Mustang.vue')
+  },
+  {
+    path: '/ferrari',
+    name: 'ferrari',
+    component: () => import('../views/Ferrari.vue')
+  },
+  {
+    path: '/lamborghini',
+    name: 'lamborghini',
+    component: () => import('../views/Lamborghini.vue')
+  },
+  {
+    path: '/porsche',
+    name: 'porsche',
+    component: () => import('../views/Porsche.vue')
   }
 ]
 

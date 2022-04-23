@@ -5,6 +5,7 @@ import { useRoute, type RouteLocationNormalizedLoaded } from 'vue-router'
 import type { CarModel } from '@/models/CarModel'
 import carsData from '@/assets/data.json'
 import ModelCard from '../components/ModelCard.vue'
+import GoBack from '../components/GoBack.vue'
 
 const route: RouteLocationNormalizedLoaded = useRoute()
 const carId: ComputedRef<number> = computed<number>(() => +route.params.id)
@@ -15,6 +16,7 @@ const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
 
 <template>
   <section class="destination">
+    <GoBack />
     <h1>{{ car?.name }}</h1>
     <div class="destination-details">
       <img :src="`/images/${car.img}`" :alt="car.name" />

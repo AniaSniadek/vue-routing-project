@@ -4,7 +4,7 @@ import carsData from '@/assets/data.json'
 
 <template>
   <div class="home">
-    <div class="destinations">
+    <div class="home__cars">
       <router-link
         v-for="car in carsData.cars"
         :key="car.id"
@@ -16,3 +16,20 @@ import carsData from '@/assets/data.json'
     </div>
   </div>
 </template>
+
+<style lang="scss">
+.home {
+  img {
+    max-width: 230px;
+  }
+
+  &__cars {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 140px;
+    }
+  }
+}
+</style>

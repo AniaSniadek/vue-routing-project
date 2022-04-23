@@ -22,9 +22,16 @@ const model: ComputedRef<CarModel.Model> = computed<CarModel.Model>(
 </script>
 
 <template>
-  <section>
+  <section class="model-view">
     <h1>{{ model.name }}</h1>
     <img :src="`/images/${model.img}`" :alt="model.name" />
     <p>{{ model.description }}</p>
   </section>
 </template>
+
+<style lang="scss">
+.model-view img {
+  float: left;
+  margin: 10px;
+}
+</style>

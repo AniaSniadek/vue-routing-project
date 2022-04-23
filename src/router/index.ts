@@ -4,6 +4,7 @@ import {
   type Router,
   type RouteRecordRaw
 } from 'vue-router'
+import carsData from '@/assets/data.json'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -15,6 +16,13 @@ const routes: RouteRecordRaw[] = [
     path: '/car/:id/:name',
     name: 'car.view',
     component: () => import('@/views/CarView.vue'),
+    beforeEnter(to) {
+      const exist = carsData.cars.find(
+        (car) => car.id === parseInt(to.params.id.toString())
+      )
+
+      if (!exist) return { name: 'notFound' }
+    },
     children: [
       {
         path: ':model',

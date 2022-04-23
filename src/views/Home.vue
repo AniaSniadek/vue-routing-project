@@ -4,7 +4,6 @@ import carsData from '@/assets/data.json'
 
 <template>
   <div class="home">
-    <h1>Cars</h1>
     <div class="destinations">
       <router-link
         v-for="car in carsData.cars"

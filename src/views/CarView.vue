@@ -2,11 +2,14 @@
 import router from '@/router'
 import { computed, type ComputedRef } from '@vue/reactivity'
 import { useRoute, type RouteLocationNormalizedLoaded } from 'vue-router'
+import type { CarModel } from '@/models/CarModel'
 import carsData from '@/assets/data.json'
 
 const route: RouteLocationNormalizedLoaded = useRoute()
 const carId: ComputedRef<number> = computed<number>(() => +route.params.id)
-const car = computed(() => carsData.cars.find((car) => car.id === carId.value))
+const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
+  () => carsData.cars.find((car) => car.id === carId.value) as CarModel.Car
+)
 </script>
 
 <template>

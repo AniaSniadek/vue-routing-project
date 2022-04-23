@@ -8,7 +8,7 @@ import carsData from '@/assets/data.json'
     <router-link
       v-for="car in carsData.cars"
       :key="car.id"
-      :to="{ name: 'car.view', params: { id: car.id } }"
+      :to="{ name: 'car.view', params: { id: car.id, name: car.link } }"
       >{{ car.name }}</router-link
     >
   </div>

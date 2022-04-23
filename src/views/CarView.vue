@@ -13,7 +13,7 @@ const car = computed(() => carsData.cars.find((car) => car.id === carId.value))
   <section class="destination">
     <h1>{{ car?.name }}</h1>
     <div class="destination-details">
-      <img :src="`../src/assets/images/${car.img}`" :alt="car.name" />
+      <img :src="`/images/${car.img}`" :alt="car.name" />
       <p>{{ car?.description }}</p>
     </div>
   </section>

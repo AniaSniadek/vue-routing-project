@@ -1,6 +1,7 @@
 import {
   createRouter,
   createWebHistory,
+  type RouteLocationNormalized,
   type Router,
   type RouteRecordRaw
 } from 'vue-router'
@@ -29,7 +30,7 @@ const routes: RouteRecordRaw[] = [
     path: '/car/:id/:name',
     name: 'car.view',
     component: () => import('@/views/CarView.vue'),
-    beforeEnter(to) {
+    beforeEnter(to: RouteLocationNormalized): { name: string } | undefined {
       const exist = carsData.cars.find(
         (car) => car.id === parseInt(to.params.id.toString())
       )
@@ -56,10 +57,12 @@ const router: Router = createRouter({
   routes
 })
 
-router.beforeEach((to) => {
-  if (to.meta.requiresAuth && !sessionStorage.getItem('user')) {
-    return { name: 'login' }
+router.beforeEach(
+  (to: RouteLocationNormalized): { name: string } | undefined => {
+    if (to.meta.requiresAuth && !sessionStorage.getItem('user')) {
+      return { name: 'login' }
+    }
   }
-})
+)
 
 export default router

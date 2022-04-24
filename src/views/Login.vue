@@ -12,7 +12,7 @@ function onSubmit(): void {
     sessionStorage.setItem('user', username.value)
     router.push({ name: 'protected' })
   } else {
-    alert('Niepoprawny login lub hasło! Spróbuj: admin')
+    alert('Invalid login or password! Try: admin')
   }
 }
 </script>

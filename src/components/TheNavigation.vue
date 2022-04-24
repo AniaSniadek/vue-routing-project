@@ -11,6 +11,7 @@ import carsData from '@/assets/data.json'
       :to="{ name: 'car.view', params: { id: car.id, name: car.link } }"
       >{{ car.name }}</router-link
     >
+    <router-link :to="{ name: 'protected' }">Dashboard</router-link>
   </div>
 </template>
 

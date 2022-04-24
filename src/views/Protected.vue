@@ -17,6 +17,7 @@ function logout(): void {
 </template>
 <style lang="scss">
 @import '@/assets/styles/colors.scss';
+
 .protected {
   padding: 0 15px;
   button {

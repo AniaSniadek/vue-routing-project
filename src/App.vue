@@ -11,7 +11,6 @@ import TheNavigation from './components/TheNavigation.vue'
 </template>
 
 <style lang="scss">
-@import '../src/assets/styles/main.css';
 @import '@/assets/styles/colors.scss';
 
 *,

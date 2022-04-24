@@ -18,6 +18,8 @@ import carsData from '@/assets/data.json'
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/colors.scss';
+
 .home {
   padding: 0 15px;
 
@@ -26,6 +28,10 @@ import carsData from '@/assets/data.json'
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+
+    h2 {
+      color: $secondColor;
+    }
 
     img {
       height: 140px;

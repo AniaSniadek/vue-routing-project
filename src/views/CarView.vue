@@ -12,6 +12,11 @@ const carId: ComputedRef<number> = computed<number>(() => +route.params.id)
 const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
   () => carsData.cars.find((car) => car.id === carId.value) as CarModel.Car
 )
+
+function scrollToModelView(): void {
+  const element: HTMLElement | null = document.getElementById('model-view')
+  element?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -31,7 +36,7 @@ const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
         :key="model.name"
         :to="{ name: 'model.view', params: { model: model.link } }"
       >
-        <ModelCard :model="model" />
+        <ModelCard :model="model" @click="scrollToModelView" />
       </router-link>
     </div>
     <RouterView />

@@ -19,16 +19,17 @@ import carsData from '@/assets/data.json'
 
 <style lang="scss">
 .home {
-  img {
-    max-width: 230px;
-  }
+  padding: 0 15px;
 
   &__cars {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 
     img {
       height: 140px;
+      width: 210px;
     }
   }
 }

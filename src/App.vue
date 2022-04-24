@@ -12,6 +12,7 @@ import TheNavigation from './components/TheNavigation.vue'
 
 <style lang="scss">
 @import '../src/assets/styles/main.css';
+@import '@/assets/styles/colors.scss';
 
 *,
 *:before,
@@ -22,26 +23,21 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 150px;
-  background: #eee;
+  background: $background;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-a,
-a:visited {
-  color: #2c3e50;
+  color: $secondColor;
 }
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1100px;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
-  color: white;
 }
 </style>

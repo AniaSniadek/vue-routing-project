@@ -11,16 +11,19 @@ const router: Router = useRouter()
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/colors.scss';
+
 .go-back {
   display: inline-block;
   margin-bottom: 15px;
   button {
-    background-color: #2c3e50;
-    border: 1px solid grey;
+    background-color: $mainColor;
+    border: 1px solid $secondColor;
     border-radius: 10px;
     padding: 8px 15px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    color: white;
+    color: $secondColor;
+    font-weight: 500;
     cursor: pointer;
   }
 }

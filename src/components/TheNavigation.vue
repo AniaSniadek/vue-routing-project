@@ -15,6 +15,8 @@ import carsData from '@/assets/data.json'
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/colors.scss';
+
 .navigation {
   position: fixed;
   top: 0;
@@ -22,17 +24,18 @@ import carsData from '@/assets/data.json'
   right: 0;
   margin-top: 0;
   padding: 30px;
-  background: #2c3e50;
-  color: white;
+  background: $mainColor;
+  color: $white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  border-bottom: 5px solid #4e6c71;
+  border-bottom: 5px solid $secondColor;
   z-index: 2;
 
   a {
     display: inline-block;
     margin-right: 20px;
-    color: white !important;
+    color: $secondColor;
     opacity: 0.7;
     transition: 0.2 ease color;
   }

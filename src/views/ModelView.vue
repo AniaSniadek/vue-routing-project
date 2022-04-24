@@ -30,8 +30,12 @@ const model: ComputedRef<CarModel.Model> = computed<CarModel.Model>(
 </template>
 
 <style lang="scss">
-.model-view img {
-  float: left;
-  margin: 10px;
+.model-view {
+  margin-top: 50px;
+  img {
+    float: left;
+    margin: 0 15px 15px 15px;
+    border-radius: 5px;
+  }
 }
 </style>

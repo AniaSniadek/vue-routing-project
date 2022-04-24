@@ -39,26 +39,34 @@ const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/colors.scss';
+
 .car-view {
+  padding: 0 15px;
   &__details {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     align-items: center;
 
+    @media screen and (min-width: 1025px) {
+      flex-direction: row;
+    }
+
     img {
       border-radius: 4px;
-      border: 3px solid white;
+      border: 3px solid $white;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      max-width: 100%;
     }
   }
 }
 
 .models {
-  padding-top: 30px;
-  padding-bottom: 60px;
+  padding: 30px 15px 60px 15px;
   margin-top: 30px;
-  border-top: 1px solid #d4d4d4;
-  box-shadow: 0px -1px #fbfbfb;
+  border-top: 1px solid $borderTop;
+  box-shadow: 0px -1px $borderShadow;
 
   img {
     width: 250px;
@@ -71,6 +79,8 @@ const car: ComputedRef<CarModel.Car> = computed<CarModel.Car>(
     display: flex;
     gap: 20px;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>

@@ -18,6 +18,8 @@ const props: {
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/colors.scss';
+
 .card {
   border-radius: 4px;
   overflow: hidden;
@@ -25,10 +27,10 @@ const props: {
   transition: 0.2s ease transform;
 
   &__text {
-    background: #2c3e50;
-    color: white;
+    background: $mainColor;
+    color: $white;
     display: block;
-    border-top: 2px solid #4e6c71;
+    border-top: 2px solid $secondColor;
     padding: 10px;
   }
 }
